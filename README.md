@@ -80,7 +80,7 @@ CDNs are used to keep setup simple and fast.
 You can add your screenshots here.
 
 - Hero Section
-  - Add an image: /assets/screenshots/hero.png
+  ![image](https://github.com/MdSaifAli063/Personal-Portfolio-Md-Saif-Ali/blob/0a4d9949f0e4ab1b0d784c59846f7afca484a57b/Screenshot%202025-09-01%20211625.png)
 - Portfolio Grid
   - Add an image: /assets/screenshots/portfolio.png
 - Services & Testimonials
