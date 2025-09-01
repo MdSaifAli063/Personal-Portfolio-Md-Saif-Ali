@@ -154,7 +154,7 @@ GitHub Pages
 4. Save — your site will be available at https://MdSaifAli063.github.io/Personal-Portfolio-Md-Saif-Ali
 
 Vercel/Netlify
-- Import the repo and deploy as a static site (no special config needed)
+- Import the repo and deploy as a static site ([no special config needed](https://mdsaifali-portfolio-063.netlify.app/))
 
 ---
 
