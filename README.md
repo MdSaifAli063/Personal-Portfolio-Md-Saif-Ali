@@ -82,7 +82,7 @@ You can add your screenshots here.
 - Hero Section
   ![image](https://github.com/MdSaifAli063/Personal-Portfolio-Md-Saif-Ali/blob/0a4d9949f0e4ab1b0d784c59846f7afca484a57b/Screenshot%202025-09-01%20211625.png)
 - Portfolio Grid
-  - Add an image: /assets/screenshots/portfolio.png
+  ![image](https://github.com/MdSaifAli063/Personal-Portfolio-Md-Saif-Ali/blob/0ede0b939e37bb84e2e4c5d8c93214343f6520ea/Screenshot%202025-09-01%20215710.png)
 - Services & Testimonials
   - Add an image: /assets/screenshots/services-testimonials.png
 
