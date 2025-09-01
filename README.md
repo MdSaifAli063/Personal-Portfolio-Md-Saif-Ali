@@ -151,7 +151,7 @@ GitHub Pages
 1. Push to a public repo
 2. Go to Settings → Pages
 3. Source: Deploy from branch → main → /root
-4. Save — your site will be available at https://your-username.github.io/your-repo
+4. Save — your site will be available at https://MdSaifAli063.github.io/Personal-Portfolio-Md-Saif-Ali
 
 Vercel/Netlify
 - Import the repo and deploy as a static site (no special config needed)
