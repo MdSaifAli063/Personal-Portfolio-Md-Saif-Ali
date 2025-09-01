@@ -98,7 +98,7 @@ Prerequisites
 
 Run locally
 1. Clone the repository
-   - git clone https://github.com/your-username/your-repo.git
+   - git clone [your-repo](https://github.com/MdSaifAli063/Personal-Portfolio-Md-Saif-Ali)
 2. Open the project
    - cd your-repo
 3. Launch
