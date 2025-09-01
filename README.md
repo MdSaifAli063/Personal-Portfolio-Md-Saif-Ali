@@ -155,7 +155,6 @@ GitHub Pages
 
 Vercel/Netlify
 - Import the repo and deploy as a static site (no special config needed)
-- ![link](https://mdsaifali-portfolio-063.netlify.app/)
 
 ---
 
