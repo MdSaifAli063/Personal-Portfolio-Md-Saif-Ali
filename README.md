@@ -15,8 +15,8 @@ A clean, modern, and responsive portfolio website showcasing my work, skills, an
 ---
 
 ## 🔗 Live Demo
-- Demo: Add your deployment URL here (e.g., GitHub Pages, Vercel)
-- Example: [link](https://mdsaifali-portfolio-063.netlify.app/)
+
+ [link](https://mdsaifali-portfolio-063.netlify.app/)
 
 ---
 
@@ -77,7 +77,6 @@ CDNs are used to keep setup simple and fast.
 ---
 
 ## 📸 Screenshots
-You can add your screenshots here.
 
 - Hero Section
   ![image](https://github.com/MdSaifAli063/Personal-Portfolio-Md-Saif-Ali/blob/0a4d9949f0e4ab1b0d784c59846f7afca484a57b/Screenshot%202025-09-01%20211625.png)
@@ -86,8 +85,6 @@ You can add your screenshots here.
 - Services & Testimonials
   ![image](https://github.com/MdSaifAli063/Personal-Portfolio-Md-Saif-Ali/blob/c0291e1615cd4c2ce269f943a620cc64c04d1d66/Screenshot%202025-09-01%20215847.png)
   ![image](https://github.com/MdSaifAli063/Personal-Portfolio-Md-Saif-Ali/blob/dd3b16cb992d5db5c9a8409083bab3d143844c32/Screenshot%202025-09-01%20215947.png)
-
-Tip: Create an assets/screenshots/ folder and drop PNG/JPG files, then update the paths above.
 
 ---
 
