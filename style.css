@@ -348,6 +348,7 @@ input {
     margin-right: 4rem;
     /* Optional: adds right spacing */
     margin-bottom: -11rem;
+    margin-top: 0rem;
     /* Adjusts the image position */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: 0.10s;
@@ -357,7 +358,7 @@ input {
 
 
 .home-title {
-    display: flex;
+    display: block;
     font-size: var(--biggest-font-size);
     font-weight: var(--font-bold);
     margin-top: -20rem;
