@@ -215,6 +215,56 @@ form.addEventListener("submit", function (e) {
     });
 });
 
+ // Typewriter effect
+    const typewriter = document.getElementById('typewriter');
+    const texts = [
+        'Full Stack Developer',
+        'UI/UX Designer',
+        'Problem Solver',
+        'Tech Enthusiast'
+    ];
+    
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    
+    function type() {
+        const currentText = texts[textIndex];
+        
+        if (isDeleting) {
+            typewriter.textContent = currentText.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            typewriter.textContent = currentText.substring(0, charIndex + 1);
+            charIndex++;
+        }
+        
+        let typeSpeed = isDeleting ? 100 : 150;
+        
+        if (!isDeleting && charIndex === currentText.length) {
+            typeSpeed = 2000;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            textIndex = (textIndex + 1) % texts.length;
+            typeSpeed = 500;
+        }
+        
+        setTimeout(type, typeSpeed);
+    }
+    
+    setTimeout(type, 1000);
+function openCertificate(src) {
+  document.getElementById("certificateImg").src = src;
+  document.getElementById("certificateModal").style.display = "flex";
+}
+
+function closeCertificate() {
+  document.getElementById("certificateImg").src = "";
+  document.getElementById("certificateModal").style.display = "none";
+}
+
+
 //share profile
 function shareProfile() {
   const shareData = {
