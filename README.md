@@ -1,6 +1,6 @@
 # 🌟 Personal Portfolio — Md Saif Ali
 
-A clean, modern, and responsive portfolio website showcasing my work, skills, and services. Built with HTML, CSS, and JavaScript, featuring smooth interactions, a fixed sidebar, a filterable portfolio, and a contact form powered by Web3Forms.
+A clean, modern, and responsive portfolio website showcasing my work, skills, and services. Built with HTML, CSS, and JavaScript, featuring smooth interactions, a fixed sidebar, a filterable portfolio, and a contact form powered by Web3Forms
 
 <p align="center">
   <img src="https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white" alt="HTML5" />
