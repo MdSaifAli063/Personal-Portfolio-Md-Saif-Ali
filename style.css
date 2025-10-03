@@ -210,6 +210,14 @@ input {
     transform: rotate(-90deg) translateX(-100%);
     transform-origin: left top;
     width: 100vh;
+    height: 100px;
+    font-size: small;
+    top: 50%;
+    left: 0;
+    margin-top: -350px;
+    text-align: center;
+    z-index: var(--z-fixed);
+    transition: .4s;
 }
 
 .menu {
@@ -290,6 +298,37 @@ input {
 
 .social-share {
     font-size: 1.5rem;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    padding: 0.8rem 1rem;
+    border-right: none;
+    border-bottom: 1px solid var(--box-color);
+  }
+
+  .nav-menu {
+    width: auto;
+  }
+
+  .menu {
+    flex-direction: row-reverse;
+    gap: 1rem;
+  }
+
+  .nav-list {
+     display: fixed;
+    flex-direction: row-reverse;
+    gap: 1rem;
+  }
+
+  .btn-share {
+    position: relative;
+    margin-left: auto;
+  }
 }
 
 /* Main - Home */
