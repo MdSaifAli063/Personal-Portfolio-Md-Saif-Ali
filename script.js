@@ -254,15 +254,27 @@ form.addEventListener("submit", function (e) {
     }
     
     setTimeout(type, 1000);
+/* -----------------------------
+   Certificate Modal Functions
+------------------------------ */
 function openCertificate(src) {
-  document.getElementById("certificateImg").src = src;
-  document.getElementById("certificateModal").style.display = "flex";
+  const modal = document.getElementById("certificateModal");
+  const img = document.getElementById("certificateImg");
+  if (modal && img) {
+    img.src = src;
+    modal.classList.add("visible");
+  }
 }
 
 function closeCertificate() {
-  document.getElementById("certificateImg").src = "";
-  document.getElementById("certificateModal").style.display = "none";
+  const modal = document.getElementById("certificateModal");
+  const img = document.getElementById("certificateImg");
+  if (modal && img) {
+    img.src = "";
+    modal.classList.remove("visible");
+  }
 }
+
 
 
 //share profile
@@ -270,17 +282,38 @@ function shareProfile() {
   const shareData = {
     title: "Check out my profile!",
     text: "Here’s my profile you might like:",
-    url: "https://mdsaifali-profile-063.netlify.app/", // replace with your actual profile URL
+    url: "https://mdsaifali-profile-063.netlify.app/",
   };
 
   if (navigator.share) {
     navigator
       .share(shareData)
-      .then(() => console.log("Profile shared successfully"))
-      .catch((error) => console.error("Error sharing:", error));
+      .then(() => showToast("Profile shared successfully"))
+      .catch((error) => {
+        console.error("Error sharing:", error);
+        showToast("Sharing failed");
+      });
+  } else if (navigator.clipboard) {
+    navigator.clipboard.writeText(shareData.url)
+      .then(() => showToast("Link copied to clipboard!"))
+      .catch(() => showToast("Copy failed. Please copy manually."));
   } else {
-    alert("Web Share not supported on this browser.");
+    alert("Sharing not supported. Copy this link:\n" + shareData.url);
   }
+}
+
+function showToast(message) {
+  const toast = document.createElement("div");
+  toast.className = "share-toast";
+  toast.textContent = message;
+  document.body.appendChild(toast);
+  setTimeout(() => {
+    toast.classList.add("visible");
+  }, 10);
+  setTimeout(() => {
+    toast.classList.remove("visible");
+    setTimeout(() => toast.remove(), 300);
+  }, 2500);
 }
 // Sidebar Toggle Functionality
 
