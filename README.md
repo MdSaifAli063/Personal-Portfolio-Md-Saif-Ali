@@ -84,7 +84,6 @@ CDNs are used to keep setup simple and fast.
   
 - Services & Testimonials
  
-  ![image](https://github.com/MdSaifAli063/Personal-Portfolio-Md-Saif-Ali/blob/dd3b16cb992d5db5c9a8409083bab3d143844c32/Screenshot%202025-09-01%20215947.png)
 
 ---
 
