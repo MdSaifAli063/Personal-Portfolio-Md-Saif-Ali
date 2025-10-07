@@ -81,7 +81,7 @@ CDNs are used to keep setup simple and fast.
 - Hero Section
   
 - Portfolio Grid
-  ![image](https://github.com/MdSaifAli063/Personal-Portfolio-Md-Saif-Ali/blob/0ede0b939e37bb84e2e4c5d8c93214343f6520ea/Screenshot%202025-09-01%20215710.png)
+  
 - Services & Testimonials
   ![image](https://github.com/MdSaifAli063/Personal-Portfolio-Md-Saif-Ali/blob/c0291e1615cd4c2ce269f943a620cc64c04d1d66/Screenshot%202025-09-01%20215847.png)
   ![image](https://github.com/MdSaifAli063/Personal-Portfolio-Md-Saif-Ali/blob/dd3b16cb992d5db5c9a8409083bab3d143844c32/Screenshot%202025-09-01%20215947.png)
