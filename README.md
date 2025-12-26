@@ -36,6 +36,7 @@ A clean, modern, and responsive portfolio website showcasing my work, skills, an
 ---
 
 ## ✨ Overview
+
 This portfolio highlights:
 - Professional summary and hero section
 - Skills with progress bars
