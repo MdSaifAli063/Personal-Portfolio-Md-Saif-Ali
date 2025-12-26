@@ -171,6 +171,7 @@ Vercel/Netlify
 ---
 
 ## 🙏 Credits
+
 - Icons: Unicons (Iconscout), Boxicons
 - Slider: Swiper.js
 - Filtering: MixItUp
