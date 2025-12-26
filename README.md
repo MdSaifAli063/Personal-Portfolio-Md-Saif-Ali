@@ -68,6 +68,7 @@ The layout is responsive and optimized for both desktop and mobile with a fixed 
 ---
 
 ## 🛠 Tech Stack
+
 - Markup/Styles: HTML5, CSS3
 - Interactivity: Vanilla JavaScript
 - Icons: Unicons, Boxicons
