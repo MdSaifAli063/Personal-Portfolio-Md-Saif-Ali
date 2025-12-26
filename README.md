@@ -124,6 +124,7 @@ Folder to edit
 ---
 
 ## 🧱 Project Structure
+
 - index.html — Main page with all sections and markup
 - style.css — Global styles, variables, layout, and components
 - script.js — Interactions (filters, sliders, modals, etc.)
