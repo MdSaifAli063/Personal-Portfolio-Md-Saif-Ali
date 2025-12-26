@@ -191,6 +191,7 @@ Vercel/Netlify
 ---
 
 ## 📄 License
+
 This project is open-source. You may use, modify, and distribute it. Consider adding an MIT License file for clarity.
 
 <p align="center">
