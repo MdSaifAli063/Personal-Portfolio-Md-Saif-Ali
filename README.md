@@ -51,6 +51,7 @@ The layout is responsive and optimized for both desktop and mobile with a fixed 
 ---
 
 ## 🚀 Features
+
 - Fixed Sidebar Navigation with active link states
 - Hero Section with social links and call-to-action
 - About Section with quick stats
