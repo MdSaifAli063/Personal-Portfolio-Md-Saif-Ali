@@ -16,11 +16,12 @@ A clean, modern, and responsive portfolio website showcasing my work, skills, an
 
 ## 🔗 Live Demo
 
- [link](https://mdsaifali-portfolio-063.netlify.app/)
+ Link : https://mdsaifali-portfolio-063.netlify.app/
 
 ---
 
 ## 🧭 Table of Contents
+
 - Overview
 - Features
 - Tech Stack
@@ -36,6 +37,7 @@ A clean, modern, and responsive portfolio website showcasing my work, skills, an
 ---
 
 ## ✨ Overview
+
 This portfolio highlights:
 - Professional summary and hero section
 - Skills with progress bars
@@ -49,6 +51,7 @@ The layout is responsive and optimized for both desktop and mobile with a fixed 
 ---
 
 ## 🚀 Features
+
 - Fixed Sidebar Navigation with active link states
 - Hero Section with social links and call-to-action
 - About Section with quick stats
@@ -65,6 +68,7 @@ The layout is responsive and optimized for both desktop and mobile with a fixed 
 ---
 
 ## 🛠 Tech Stack
+
 - Markup/Styles: HTML5, CSS3
 - Interactivity: Vanilla JavaScript
 - Icons: Unicons, Boxicons
@@ -79,12 +83,21 @@ CDNs are used to keep setup simple and fast.
 ## 📸 Screenshots
 
 - Hero Section
-  ![image](https://github.com/MdSaifAli063/Personal-Portfolio-Md-Saif-Ali/blob/0a4d9949f0e4ab1b0d784c59846f7afca484a57b/Screenshot%202025-09-01%20211625.png)
+
+  ![image](https://github.com/MdSaifAli063/Personal-Portfolio-Md-Saif-Ali/blob/c3ef48e3816b3eb38c89efe1b0cb87d03c6553fc/Screenshot%202025-10-08%20013733_edited.png)
+
+  ![image](https://github.com/MdSaifAli063/Personal-Portfolio-Md-Saif-Ali/blob/511fc4392febe3b1f6f471d512df56e790b65708/Screenshot%202025-10-08%20013925_edited.png)
+  
 - Portfolio Grid
-  ![image](https://github.com/MdSaifAli063/Personal-Portfolio-Md-Saif-Ali/blob/0ede0b939e37bb84e2e4c5d8c93214343f6520ea/Screenshot%202025-09-01%20215710.png)
+
+  ![image](https://github.com/MdSaifAli063/Personal-Portfolio-Md-Saif-Ali/blob/ef16737b9a2445f64a1d1e0f1850af3bb66f88d2/Screenshot%202025-10-08%20014129_edited.png)
+  
 - Services & Testimonials
-  ![image](https://github.com/MdSaifAli063/Personal-Portfolio-Md-Saif-Ali/blob/c0291e1615cd4c2ce269f943a620cc64c04d1d66/Screenshot%202025-09-01%20215847.png)
-  ![image](https://github.com/MdSaifAli063/Personal-Portfolio-Md-Saif-Ali/blob/dd3b16cb992d5db5c9a8409083bab3d143844c32/Screenshot%202025-09-01%20215947.png)
+
+  ![image](https://github.com/MdSaifAli063/Personal-Portfolio-Md-Saif-Ali/blob/a8513c4b3c26e0aa710a5c8aec06b0d276e5a4ef/Screenshot%202025-10-08%20014413_edited.png)
+
+  ![image](https://github.com/MdSaifAli063/Personal-Portfolio-Md-Saif-Ali/blob/97189e19bf9f95b38cba42f2b086b1dd699efcb8/Screenshot%202025-10-08%20014504_edited.png)
+ 
 
 ---
 
@@ -111,6 +124,7 @@ Folder to edit
 ---
 
 ## 🧱 Project Structure
+
 - index.html — Main page with all sections and markup
 - style.css — Global styles, variables, layout, and components
 - script.js — Interactions (filters, sliders, modals, etc.)
@@ -157,6 +171,7 @@ Vercel/Netlify
 ---
 
 ## 🙏 Credits
+
 - Icons: Unicons (Iconscout), Boxicons
 - Slider: Swiper.js
 - Filtering: MixItUp
@@ -165,6 +180,7 @@ Vercel/Netlify
 ---
 
 ## 📬 Contact
+
 - Name: Md Saif Ali
 - Email: mdsaifali6303@gmail.com
 - WhatsApp: 903-122-8966
@@ -175,6 +191,7 @@ Vercel/Netlify
 ---
 
 ## 📄 License
+
 This project is open-source. You may use, modify, and distribute it. Consider adding an MIT License file for clarity.
 
 <p align="center">
