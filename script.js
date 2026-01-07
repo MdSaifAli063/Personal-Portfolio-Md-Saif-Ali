@@ -280,7 +280,7 @@ function shareProfile() {
   const shareData = {
     title: "Check out my profile!",
     text: "Here’s my profile you might like:",
-    url: "",
+    url: "https://personal-portfolio-md-saif-ali.vercel.app/",
   };
 
   if (navigator.share) {
