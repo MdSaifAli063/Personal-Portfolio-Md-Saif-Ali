@@ -215,45 +215,45 @@ form.addEventListener("submit", function (e) {
     });
 });
 
- // Typewriter effect
-    const typewriter = document.getElementById('typewriter');
-    const texts = [
-        'Full Stack Developer',
-        'UI/UX Designer',
-        'Problem Solver',
-        'Tech Enthusiast'
-    ];
-    
-    let textIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    
-    function type() {
-        const currentText = texts[textIndex];
-        
-        if (isDeleting) {
-            typewriter.textContent = currentText.substring(0, charIndex - 1);
-            charIndex--;
-        } else {
-            typewriter.textContent = currentText.substring(0, charIndex + 1);
-            charIndex++;
-        }
-        
-        let typeSpeed = isDeleting ? 100 : 150;
-        
-        if (!isDeleting && charIndex === currentText.length) {
-            typeSpeed = 2000;
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            textIndex = (textIndex + 1) % texts.length;
-            typeSpeed = 500;
-        }
-        
-        setTimeout(type, typeSpeed);
-    }
-    
-    setTimeout(type, 1000);
+// Typewriter effect
+const typewriter = document.getElementById("typewriter");
+const texts = [
+  "Full Stack Developer",
+  "UI/UX Designer",
+  "Problem Solver",
+  "Tech Enthusiast",
+];
+
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function type() {
+  const currentText = texts[textIndex];
+
+  if (isDeleting) {
+    typewriter.textContent = currentText.substring(0, charIndex - 1);
+    charIndex--;
+  } else {
+    typewriter.textContent = currentText.substring(0, charIndex + 1);
+    charIndex++;
+  }
+
+  let typeSpeed = isDeleting ? 100 : 150;
+
+  if (!isDeleting && charIndex === currentText.length) {
+    typeSpeed = 2000;
+    isDeleting = true;
+  } else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    textIndex = (textIndex + 1) % texts.length;
+    typeSpeed = 500;
+  }
+
+  setTimeout(type, typeSpeed);
+}
+
+setTimeout(type, 1000);
 /* -----------------------------
    Certificate Modal Functions
 ------------------------------ */
@@ -275,14 +275,12 @@ function closeCertificate() {
   }
 }
 
-
-
 //share profile
 function shareProfile() {
   const shareData = {
     title: "Check out my profile!",
     text: "Here’s my profile you might like:",
-    url: "https://mdsaifali-profile-063.netlify.app/",
+    url: "",
   };
 
   if (navigator.share) {
@@ -294,7 +292,8 @@ function shareProfile() {
         showToast("Sharing failed");
       });
   } else if (navigator.clipboard) {
-    navigator.clipboard.writeText(shareData.url)
+    navigator.clipboard
+      .writeText(shareData.url)
       .then(() => showToast("Link copied to clipboard!"))
       .catch(() => showToast("Copy failed. Please copy manually."));
   } else {
@@ -317,23 +316,21 @@ function showToast(message) {
 }
 // Sidebar Toggle Functionality
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.getElementById('nav-toggle');
-    const sidebar = document.getElementById('sidebar');
-    const overlay = document.getElementById('sidebar-overlay');
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("nav-toggle");
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("sidebar-overlay");
 
-    function toggleSidebar() {
-      sidebar.classList.toggle('show-sidebar');
-      overlay.classList.toggle('active');
-    }
+  function toggleSidebar() {
+    sidebar.classList.toggle("show-sidebar");
+    overlay.classList.toggle("active");
+  }
 
-    function closeSidebar() {
-      sidebar.classList.remove('show-sidebar');
-      overlay.classList.remove('active');
-    }
+  function closeSidebar() {
+    sidebar.classList.remove("show-sidebar");
+    overlay.classList.remove("active");
+  }
 
-    toggle.addEventListener('click', toggleSidebar);
-    overlay.addEventListener('click', closeSidebar);
-  });
-
-
+  toggle.addEventListener("click", toggleSidebar);
+  overlay.addEventListener("click", closeSidebar);
+});
