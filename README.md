@@ -185,7 +185,7 @@ Vercel/Netlify
 - Email: mdsaifali6303@gmail.com
 - WhatsApp: 903-122-8966
 - Twitter: https://x.com/Md_Saif_Ali_063
-- LinkedIn: https://www.linkedin.com/in/md-saif-ali-6bb4ab292
+- LinkedIn: https://www.linkedin.com/in/mdsaifali063
 - GitHub: https://github.com/MdSaifAli063
 
 ---
