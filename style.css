@@ -707,6 +707,10 @@ input {
     animation: slideInLeft 1s ease 0.2s forwards;
 }
 
+.home-data {
+    margin-top: -4rem;
+}
+
 .highlight {
     background: linear-gradient(45deg, #00f5ff, #ff6b6b);
     background-clip: text;
@@ -783,6 +787,10 @@ input {
 
 /* Responsive for small screens */
 @media (max-width: 600px) {
+    .home-data {
+        margin-top: 0;
+    }
+
     .home-buttons {
         flex-direction: column;
         align-items: center;
