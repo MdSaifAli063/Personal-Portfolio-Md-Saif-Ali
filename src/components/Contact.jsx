@@ -74,17 +74,19 @@ const Contact = () => {
 
   return (
     <section className="contact section" id="contact">
-      <h2 className="section-title" data-heading="Get in Touch">
-        Contact me
+      <h2 className="section-title" data-heading="Contact">
+        Get In Touch
       </h2>
 
       <div className="contact-container container grid">
         <div className="contact-content">
           <div className="contact-info">
             <div className="contact-card">
-              <i className="uil uil-envelope-edit contact-card-icon"></i>
+              <div className="contact-icon-box">
+                <i className="uil uil-envelope-edit contact-card-icon"></i>
+              </div>
               <h3 className="contact-card-title">Email</h3>
-              <span className="contact-card-data">mdsaifali@gmail.com</span>
+              <span className="contact-card-data">mdsaifali6303@gmail.com</span>
               <span
                 className="contact-button"
                 onClick={() => (window.location.href = 'mailto:mdsaifali6303@gmail.com')}
@@ -94,9 +96,11 @@ const Contact = () => {
             </div>
 
             <div className="contact-card">
-              <i className="uil uil-whatsapp contact-card-icon"></i>
+              <div className="contact-icon-box">
+                <i className="uil uil-whatsapp contact-card-icon"></i>
+              </div>
               <h3 className="contact-card-title">Whatsapp</h3>
-              <span className="contact-card-data">903-122-8966</span>
+              <span className="contact-card-data">+91 9031228966</span>
               <span
                 className="contact-button"
                 onClick={() => window.open('https://wa.me/919031228966', '_blank')}
@@ -106,7 +110,9 @@ const Contact = () => {
             </div>
 
             <div className="contact-card">
-              <i className="uil uil-telegram contact-card-icon"></i>
+              <div className="contact-icon-box">
+                <i className="uil uil-telegram contact-card-icon"></i>
+              </div>
               <h3 className="contact-card-title">Telegram</h3>
               <span className="contact-card-data">Md Saif Ali</span>
               <span
@@ -197,7 +203,7 @@ const Contact = () => {
             </div>
 
             <button type="submit" className="button">
-              <i className="uil uil-navigator button-icon"></i>Send Message
+              <i className="uil uil-navigator button-icon"></i>SEND MESSAGE
             </button>
 
             {statusMessage && (

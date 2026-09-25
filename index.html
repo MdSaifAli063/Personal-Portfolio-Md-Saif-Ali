@@ -2,17 +2,129 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🧑‍💻 Portfolio | Md Saif Ali</title>
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- ═══════════════════════════════════════
+       CORE META
+  ═══════════════════════════════════════ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Primary Title & Description -->
+  <title>Md Saif Ali | Full-Stack & AI Developer — Portfolio</title>
+  <meta name="description" content="Portfolio of Md Saif Ali — Full-Stack & AI Developer based in Bangalore. Building scalable web apps with React, Python, Node.js, and AI workflows. Available for opportunities & freelance.">
+  <meta name="keywords" content="Md Saif Ali, Full-Stack Developer, AI Developer, React Developer, Node.js, Python, Web Developer Bangalore, Portfolio, MdSaifAli063, Freelance Developer">
+  <meta name="author" content="Md Saif Ali">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#039efe">
+  <meta name="color-scheme" content="dark">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://personal-portfolio-md-saif-ali.vercel.app/">
+
+  <!-- ═══════════════════════════════════════
+       FAVICON & APP ICONS
+  ═══════════════════════════════════════ -->
+  <link rel="icon" type="image/png" sizes="16x16"  href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32"  href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48"  href="/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="96x96"  href="/favicon-96x96.png">
+
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <!-- Android Chrome / PWA -->
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Windows Tiles -->
+  <meta name="msapplication-TileColor"   content="#039efe">
+  <meta name="msapplication-TileImage"   content="/favicon-144x144.png">
+  <meta name="msapplication-config"      content="/browserconfig.xml">
+  <meta name="application-name"          content="Saif Ali Portfolio">
+
+  <!-- ═══════════════════════════════════════
+       OPEN GRAPH (Facebook / LinkedIn / WhatsApp)
+  ═══════════════════════════════════════ -->
+  <meta property="og:type"              content="website">
+  <meta property="og:site_name"         content="Md Saif Ali — Portfolio">
+  <meta property="og:title"             content="Md Saif Ali | Full-Stack & AI Developer">
+  <meta property="og:description"       content="Full-Stack & AI Developer based in Bangalore. Building scalable web apps with React, Python, Node.js, and intelligent AI workflows. Available for opportunities & freelance.">
+  <meta property="og:url"               content="https://personal-portfolio-md-saif-ali.vercel.app/">
+  <meta property="og:image"             content="https://personal-portfolio-md-saif-ali.vercel.app/og-image.png">
+  <meta property="og:image:secure_url"  content="https://personal-portfolio-md-saif-ali.vercel.app/og-image.png">
+  <meta property="og:image:type"        content="image/png">
+  <meta property="og:image:width"       content="1200">
+  <meta property="og:image:height"      content="630">
+  <meta property="og:image:alt"         content="Md Saif Ali — Full-Stack & AI Developer Portfolio">
+  <meta property="og:locale"            content="en_US">
+
+  <!-- ═══════════════════════════════════════
+       TWITTER CARD
+  ═══════════════════════════════════════ -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:site"        content="@Md_Saif_Ali_063">
+  <meta name="twitter:creator"     content="@Md_Saif_Ali_063">
+  <meta name="twitter:title"       content="Md Saif Ali | Full-Stack & AI Developer">
+  <meta name="twitter:description" content="Full-Stack & AI Developer building scalable web apps with React, Python, Node.js, and AI workflows. Available for freelance.">
+  <meta name="twitter:image"       content="https://personal-portfolio-md-saif-ali.vercel.app/og-image.png">
+  <meta name="twitter:image:alt"   content="Md Saif Ali Portfolio">
+
+  <!-- ═══════════════════════════════════════
+       JSON-LD STRUCTURED DATA (Google Rich Results)
+  ═══════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Md Saif Ali",
+    "url": "https://personal-portfolio-md-saif-ali.vercel.app/",
+    "image": "https://personal-portfolio-md-saif-ali.vercel.app/og-image.png",
+    "logo": "https://personal-portfolio-md-saif-ali.vercel.app/android-chrome-512x512.png",
+    "jobTitle": "Full-Stack & AI Developer",
+    "description": "Full-Stack & AI Developer based in Bangalore, India. Building scalable web applications with clean UI, intelligent AI workflows, and robust backend architectures.",
+    "email": "mdsaifali6303@gmail.com",
+    "telephone": "+91 9031228966",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bangalore",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://github.com/MdSaifAli063",
+      "https://www.linkedin.com/in/mdsaifali063",
+      "https://www.x.com/@Md_Saif_Ali_063",
+      "https://www.instagram.com/md_saif_ali_063"
+    ],
+    "knowsAbout": ["React", "Node.js", "Python", "Full-Stack Development", "AI Development", "Web Development", "UI/UX Design"],
+    "alumniOf": {
+      "@type": "Organization",
+      "name": "Bangalore"
+    }
+  }
+  </script>
+
+  <!-- ═══════════════════════════════════════
+       PERFORMANCE: Preconnect & Font Loading
+  ═══════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://unicons.iconscout.com">
+  <link rel="dns-prefetch" href="https://unpkg.com">
+
+  <!-- ═══════════════════════════════════════
+       EXTERNAL STYLESHEETS
+  ═══════════════════════════════════════ -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 
 <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
 </body>
 
 </html>

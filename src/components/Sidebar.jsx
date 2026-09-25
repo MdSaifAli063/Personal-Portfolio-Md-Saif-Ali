@@ -22,7 +22,7 @@ const Sidebar = () => {
 
       sections.forEach((current) => {
         const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 50;
+        const sectionTop = current.offsetTop - 100;
         const sectionId = current.getAttribute('id');
 
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
@@ -69,22 +69,17 @@ const Sidebar = () => {
 
   return (
     <>
-      <div
-        className="nav-toggle"
-        id="nav-toggle"
-        onClick={() => setShowSidebar(true)}
-      >
-        <i className="uil uil-bars"></i>
-      </div>
-
-      <aside
-        className={`sidebar ${showSidebar ? 'show-sidebar' : ''}`}
-        id="sidebar"
-      >
+      <aside className={`sidebar ${showSidebar ? 'show-sidebar' : ''}`}>
         <nav className="nav">
           <div className="nav-logo">
-            <a href="#" className="nav-logo-text">
-              S
+            <a href="#home" className="nav-logo-link" aria-label="Md Saif Ali — Home">
+              <img
+                src="/saifalogo.png"
+                alt="Saif Ali Logo"
+                className="nav-logo-img"
+                width="44"
+                height="44"
+              />
             </a>
           </div>
 
@@ -95,15 +90,14 @@ const Sidebar = () => {
                   <li className="nav-item" key={link.id}>
                     <a
                       href={`#${link.id}`}
-                      className={`nav-link ${
-                        activeNav === link.id ? 'active-link' : ''
-                      }`}
+                      className={`nav-link ${activeNav === link.id ? 'active-link' : ''}`}
                       onClick={() => {
                         setActiveNav(link.id);
                         setShowSidebar(false);
                       }}
+                      title={link.label}
                     >
-                      {link.label}
+                      <span className="nav-name">{link.label}</span>
                     </a>
                   </li>
                 ))}
@@ -111,24 +105,25 @@ const Sidebar = () => {
             </div>
           </div>
 
-          <div
-            className="nav-close"
-            id="nav-close"
-            onClick={() => setShowSidebar(false)}
-          >
-            <i className="uil uil-times"></i>
+          <div className="btn-share" onClick={shareProfile} title="Share Profile">
+            <span className="social-share">
+              <i className="uil uil-share-alt"></i>
+            </span>
           </div>
-          <div className="btn-share" onClick={shareProfile}>
-            <i className="uil uil-share-alt social-share"></i>
+
+          <div className="nav-close" onClick={() => setShowSidebar(false)}>
+            <i className="uil uil-times"></i>
           </div>
         </nav>
       </aside>
 
-      {toast.visible && (
-        <div className={`share-toast ${toast.visible ? 'visible' : ''}`}>
-          {toast.message}
-        </div>
-      )}
+      <div className="nav-toggle" onClick={() => setShowSidebar(!showSidebar)}>
+        <i className="uil uil-bars"></i>
+      </div>
+
+      <div className={`share-toast ${toast.visible ? 'visible' : ''}`}>
+        {toast.message}
+      </div>
     </>
   );
 };
