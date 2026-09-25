@@ -250,17 +250,17 @@ input {
 }
 
 .nav-logo-img {
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid rgba(3, 158, 254, 0.5);
-    box-shadow: 0 0 16px rgba(3, 158, 254, 0.45);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    border: none;
+    box-shadow: 0 0 18px rgba(3, 158, 254, 0.45);
+    transition: box-shadow 0.3s ease, transform 0.3s ease, filter 0.3s ease;
 }
 
 .nav-logo-link:hover .nav-logo-img {
-    box-shadow: 0 0 28px rgba(3, 158, 254, 0.75);
+    box-shadow: 0 0 28px rgba(3, 158, 254, 0.85);
     transform: scale(1.08);
 }
 
@@ -3177,11 +3177,11 @@ textarea.input {
 }
 
 .footer-logo-img {
-    width: 50px;
-    height: 50px;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
-    border: 2px solid rgba(3, 158, 254, 0.5);
-    box-shadow: 0 0 18px rgba(3, 158, 254, 0.3);
+    border: none;
+    box-shadow: 0 0 18px rgba(3, 158, 254, 0.4);
     object-fit: cover;
 }
 
@@ -5208,14 +5208,15 @@ textarea.input {
     height: 52px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid rgba(3, 158, 254, 0.4);
-    box-shadow: 0 0 18px rgba(3, 158, 254, 0.35);
+    border: none;
+    box-shadow: 0 0 18px rgba(3, 158, 254, 0.4);
     flex-shrink: 0;
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .footer-brand:hover .footer-logo-img {
-    box-shadow: 0 0 30px rgba(3, 158, 254, 0.6);
+    box-shadow: 0 0 30px rgba(3, 158, 254, 0.8);
+    transform: scale(1.06);
 }
 
 .footer-bg {
