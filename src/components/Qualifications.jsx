@@ -1,95 +1,150 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+const SparkIcon = () => (
+  <svg
+    className="bullet-icon-spark"
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    {/* Main 4-pointed star outline */}
+    <path d="M12 3C12 7.5 7.5 12 3 12C7.5 12 12 16.5 12 21C12 16.5 16.5 12 21 12C16.5 12 12 7.5 12 3Z" />
+    {/* Plus sign at top-right */}
+    <path d="M19 3v4M17 5h4" strokeWidth="1.5" />
+    {/* Small circle dot at bottom-left */}
+    <circle cx="5.5" cy="18.5" r="1.2" fill="currentColor" stroke="none" />
+  </svg>
+);
 
 const Qualifications = () => {
+  const [filter, setFilter] = useState('all');
+
+  const timelineData = [
+    {
+      id: 1,
+      type: 'work',
+      date: 'MAR 2026 — MAY 2026',
+      title: 'Software Engineer Intern',
+      company: 'Syscrust Technology Consultancy Services • Remote / Bangalore',
+      bullets: [
+        'Built and deployed 3+ full-stack web applications using React.js, Node.js, and PostgreSQL, reducing manual processing time by 40%.',
+        'Enhanced 2 enterprise software modules, improving application scalability and cutting response time by 30% through optimized API design.',
+        'Collaborated with a 5-member cross-functional team in agile sprints, delivering 100% of assigned features on schedule.'
+      ]
+    },
+    {
+      id: 2,
+      type: 'work',
+      date: 'JUL 2025 — SEP 2025',
+      title: 'Software Developer Intern',
+      company: 'XNodes Technologies Pvt. Ltd. • Hybrid / Bengaluru',
+      bullets: [
+        'Developed 8+ RESTful API endpoints using Python, Flask, and Django for Student School Scheduling System serving 500+ student records.',
+        'Reduced data retrieval time by 25% by redesigning database queries and implementing efficient indexing.',
+        'Achieved 95% on-time delivery rate across sprint cycles applying clean architecture principles.'
+      ]
+    },
+    {
+      id: 3,
+      type: 'education',
+      date: '2023 — 2027 (GRADUATION: JULY 2027)',
+      title: 'Bachelor of Engineering — Computer Science',
+      company: 'Ghousia College of Engineering | Visvesvaraya Technological University',
+      bullets: [
+        'CGPA: 8.11 / 10.0',
+        'Focus on Full-Stack Systems, Data Structures & Algorithms, AI Workflows, Database Management & Software Design Patterns.'
+      ]
+    },
+    {
+      id: 4,
+      type: 'education',
+      date: '2022 — 2023',
+      title: 'Higher Secondary Certificate (XII)',
+      company: 'B.N. College, Bhagalpur, Bihar',
+      bullets: [
+        'Score: 72.4%',
+        'Science Stream with Mathematics & Computer Science.'
+      ]
+    }
+  ];
+
+  const filteredData =
+    filter === 'all'
+      ? timelineData
+      : timelineData.filter((item) => item.type === filter);
+
   return (
-    <section className="qualification section">
-      <h2 className="section-title" data-heading="My Journey">
-        Qualifications
+    <section className="qualification section" id="qualification">
+      <h2 className="section-title" data-heading="Journey">
+        Experience &amp; Education
       </h2>
 
-      <div className="qualification-container container grid">
-        <div className="education">
-          <h3 className="qualification-title">
-            <i className="uil uil-graduation-cap"></i>Education
-          </h3>
+      {/* Filter Tabs */}
+      <div className="qualification-tabs">
+        <button
+          className={`tab-btn ${filter === 'all' ? 'active-tab' : ''}`}
+          onClick={() => setFilter('all')}
+        >
+          <i className="uil uil-apps"></i> All Timeline
+        </button>
+        <button
+          className={`tab-btn ${filter === 'work' ? 'active-tab' : ''}`}
+          onClick={() => setFilter('work')}
+        >
+          <i className="uil uil-briefcase-alt"></i> Experience
+        </button>
+        <button
+          className={`tab-btn ${filter === 'education' ? 'active-tab' : ''}`}
+          onClick={() => setFilter('education')}
+        >
+          <i className="uil uil-graduation-cap"></i> Education
+        </button>
+      </div>
 
-          <div className="timeline">
-            <div className="timeline-item">
-              <div className="circle-dot"></div>
-              <h3 className="timeline-title">
-                Ghousia College of Engineering | VisvesvarayaTechnological University
-              </h3>
-              <p className="timeline-text">
-                Bachelor of Computer Science <br />
-                CGPA: 8.33 / 10.0
-              </p>
-              <span className="timeline-date">
-                <i className="uil uil-calendar-alt"></i>2023 - 2027,<br />
-              </span>
-              <span>(AnticipatedGraduation Date:July 2027)</span>
-            </div>
+      {/* Center Vertical Timeline Container */}
+      <div className="center-timeline-wrapper container">
+        {/* Center Vertical Line */}
+        <div className="center-timeline-line"></div>
 
-            <div className="timeline-item">
-              <div className="circle-dot"></div>
-              <h3 className="timeline-title">B.N. College, Bhagalpur</h3>
-              <p className="timeline-text">
-                High School/Secondary Certificate Programs 12th:76.8%
-              </p>
-              <span className="timeline-date">
-                <i className="uil uil-calendar-alt"></i>2022 - 2023
-              </span>
-            </div>
-          </div>
-        </div>
+        <div className="center-timeline-items">
+          {filteredData.map((item, index) => {
+            const isLeft = index % 2 === 0;
 
-        <div className="experience">
-          <h3 className="qualification-title">
-            <i className="uil uil-trophy"></i>ACHIEVEMENTS
-          </h3>
+            return (
+              <div
+                key={item.id}
+                className={`center-timeline-row ${
+                  isLeft ? 'row-left' : 'row-right'
+                }`}
+              >
+                {/* Center Circle Ring Dot */}
+                <div className="timeline-center-dot">
+                  <div className="dot-inner"></div>
+                </div>
 
-          <div className="timeline">
-            <div className="timeline-item">
-              <div className="circle-dot"></div>
-              <h3 className="timeline-title">Certificate of Publication</h3>
-              <p className="timeline-text">
-                Manuscript Title: Performance Analysis of Linear CongruentialRandom
-                Generator Algorithms Using Python and Java Languages.
-              </p>
-              <span className="timeline-date">
-                <i className="uil uil-calendar-alt"></i>2024 - Present
-              </span>
-            </div>
+                {/* Timeline Card */}
+                <div className="center-timeline-card">
+                  <span className="card-date">{item.date}</span>
+                  <h3 className="card-title">{item.title}</h3>
+                  <span className="card-company">{item.company}</span>
 
-            <div className="timeline-item">
-              <div className="circle-dot"></div>
-              <h3 className="timeline-title">Academic or Project Leader</h3>
-              <p className="timeline-text">
-                Team Leader for TECHFILES Project, led a team of four to design and
-                implement innovative solutions.
-              </p>
-              <span className="timeline-date">
-                <i className="uil uil-calendar-alt"></i>2024 - Present
-              </span>
-            </div>
-
-            <div className="timeline-item">
-              <div className="circle-dot"></div>
-              <h3 className="timeline-title">Hackathons</h3>
-              <p className="timeline-text">
-                Participate of the Ghousia-College Hackathon for a Real-world
-                project.
-              </p>
-              <span className="timeline-date">
-                <i className="uil uil-calendar-alt"></i>2024
-              </span>
-              <p className="timeline-text">
-                Certificate of Participation — HackWithIndia.
-              </p>
-              <span className="timeline-date">
-                <i className="uil uil-calendar-alt"></i>2025
-              </span>
-            </div>
-          </div>
+                  <div className="card-bullets">
+                    {item.bullets.map((bullet, bIndex) => (
+                      <div key={bIndex} className="bullet-item">
+                        <SparkIcon />
+                        <span>{bullet}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
