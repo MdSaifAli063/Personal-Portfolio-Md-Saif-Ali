@@ -1,11 +1,23 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 
-const Sidebar = () => {
-  const [showSidebar, setShowSidebar] = useState(false);
-  const [activeNav, setActiveNav] = useState('home');
-  const [toast, setToast] = useState({ visible: false, message: '' });
+interface NavLink {
+  id: string;
+  label: string;
+}
 
-  const navLinks = [
+interface ToastState {
+  visible: boolean;
+  message: string;
+}
+
+export const Sidebar: React.FC = () => {
+  const [showSidebar, setShowSidebar] = useState<boolean>(false);
+  const [activeNav, setActiveNav] = useState<string>('home');
+  const [toast, setToast] = useState<ToastState>({ visible: false, message: '' });
+
+  const navLinks: NavLink[] = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
     { id: 'skills', label: 'Skills' },
@@ -17,7 +29,7 @@ const Sidebar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = document.querySelectorAll('section[id]');
+      const sections = document.querySelectorAll<HTMLElement>('section[id]');
       const scrollY = window.pageYOffset;
 
       sections.forEach((current) => {
@@ -25,7 +37,7 @@ const Sidebar = () => {
         const sectionTop = current.offsetTop - 100;
         const sectionId = current.getAttribute('id');
 
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        if (sectionId && scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
           setActiveNav(sectionId);
         }
       });
@@ -35,7 +47,7 @@ const Sidebar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const showToast = (message) => {
+  const showToast = (message: string) => {
     setToast({ visible: true, message });
     setTimeout(() => {
       setToast((prev) => ({ ...prev, visible: false }));
@@ -77,8 +89,8 @@ const Sidebar = () => {
                 src="/saifalogo.png"
                 alt="Saif Ali Logo"
                 className="nav-logo-img"
-                width="44"
-                height="44"
+                width={44}
+                height={44}
               />
             </a>
           </div>

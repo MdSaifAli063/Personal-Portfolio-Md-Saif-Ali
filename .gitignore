@@ -16,6 +16,8 @@ node_modules/
 # Production build outputs
 dist/
 dist-ssr/
+.next/
+out/
 
 # Environment files
 .env

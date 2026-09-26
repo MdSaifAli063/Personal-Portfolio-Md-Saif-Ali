@@ -1,15 +1,17 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 
-const Home = () => {
-  const texts = [
+export const Home: React.FC = () => {
+  const texts: string[] = [
     "Full-Stack & AI Developer",
     "Software Engineer Intern",
     "React & Python Architect",
     "LLMs & AI Agents Builder"
   ];
-  const [textIndex, setTextIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
+  const [textIndex, setTextIndex] = useState<number>(0);
+  const [charIndex, setCharIndex] = useState<number>(0);
+  const [isDeleting, setIsDeleting] = useState<boolean>(false);
 
   useEffect(() => {
     const currentText = texts[textIndex];
@@ -30,48 +32,10 @@ const Home = () => {
     }, typeSpeed);
 
     return () => clearTimeout(timeout);
-  }, [charIndex, isDeleting, textIndex]);
+  }, [charIndex, isDeleting, textIndex, texts]);
 
   return (
     <section className="home" id="home">
-      {/* Background Animated Developer Tool Icons & Ambient Glows */}
-      <div className="tools-background">
-        <div className="glow-orb orb-1"></div>
-        <div className="glow-orb orb-2"></div>
-        <div className="glow-orb orb-3"></div>
-
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-          className="tool-icon"
-          alt="HTML5"
-        />
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-          className="tool-icon"
-          alt="CSS3"
-        />
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-          className="tool-icon"
-          alt="JS"
-        />
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-          className="tool-icon"
-          alt="React"
-        />
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-          className="tool-icon"
-          alt="Node.js"
-        />
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-          className="tool-icon"
-          alt="Python"
-        />
-      </div>
-
       <div className="home-container container">
         {/* Top Social Header Bar aligned with Sidebar Logo */}
         <div className="home-social">
@@ -130,7 +94,6 @@ const Home = () => {
         <div className="home-hero-grid">
           {/* Left Column: Status Badge, Title, Bio, Buttons, Contact Cards */}
           <div className="home-data">
-
             <div className="status-badge">
               <span className="status-dot"></span>
               Available for Opportunities &amp; Freelance
@@ -172,7 +135,7 @@ const Home = () => {
               </a>
             </div>
 
-            {/* Glassmorphic Contact Cards */}
+            {/* Clean Contact Info Cards matching backup.css */}
             <div className="my-info">
               <a
                 href="https://wa.me/919031228966"

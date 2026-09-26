@@ -1,10 +1,26 @@
+'use client';
+
 import React, { useState } from 'react';
 
-const Achievements = () => {
-  const [selectedImg, setSelectedImg] = useState(null);
-  const [dropdownOpen, setDropdownOpen] = useState(true);
+interface AchievementItem {
+  title: string;
+  subtitle: string;
+  icon: string;
+  tag: string;
+}
 
-  const achievementsList = [
+interface CertificationItem {
+  title: string;
+  issuer: string;
+  src: string;
+  icon: string;
+}
+
+export const Achievements: React.FC = () => {
+  const [selectedImg, setSelectedImg] = useState<string | null>(null);
+  const [dropdownOpen, setDropdownOpen] = useState<boolean>(true);
+
+  const achievementsList: AchievementItem[] = [
     {
       title: 'Meta PyTorch OpenEnv Hackathon × Scaler',
       subtitle: 'Round 1 Qualified out of 1000+ teams across India for strong technical proficiency and problem-solving',
@@ -79,7 +95,7 @@ const Achievements = () => {
     }
   ];
 
-  const certificationsList = [
+  const certificationsList: CertificationItem[] = [
     {
       title: 'Google Cloud Gen AI Academy APAC 2026',
       issuer: 'Google Cloud × Hack2skill',

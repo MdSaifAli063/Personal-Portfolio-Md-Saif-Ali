@@ -1,8 +1,19 @@
 import React from 'react';
 import SignatureAnimation from './SignatureAnimation';
 
-const Footer = () => {
-  const navLinks = [
+interface FooterNavLink {
+  label: string;
+  href: string;
+}
+
+interface SocialLink {
+  icon: string;
+  href: string;
+  label: string;
+}
+
+export const Footer: React.FC = () => {
+  const navLinks: FooterNavLink[] = [
     { label: 'Home', href: '#home' },
     { label: 'About', href: '#about' },
     { label: 'Skills', href: '#skills' },
@@ -11,7 +22,7 @@ const Footer = () => {
     { label: 'Contact', href: '#contact' },
   ];
 
-  const socials = [
+  const socials: SocialLink[] = [
     { icon: 'uil-facebook-f', href: 'https://www.facebook.com/share/1GQogSxoWe/', label: 'Facebook' },
     { icon: 'uil-instagram', href: 'https://www.instagram.com/md_saif_ali_063', label: 'Instagram' },
     { icon: 'uil-twitter', href: 'https://www.x.com/@Md_Saif_Ali_063', label: 'Twitter/X' },
@@ -33,8 +44,8 @@ const Footer = () => {
               src="/saifalogo.png"
               alt="Saif Ali Logo"
               className="footer-logo-img"
-              width="52"
-              height="52"
+              width={52}
+              height={52}
             />
             <div className="footer-brand-text">
               <h2 className="footer-title">Md Saif Ali</h2>

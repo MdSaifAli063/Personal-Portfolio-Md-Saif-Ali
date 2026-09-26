@@ -1,6 +1,17 @@
+'use client';
+
 import React, { useState } from 'react';
 
-const SparkIcon = () => (
+interface TimelineItem {
+  id: number;
+  type: 'work' | 'education';
+  date: string;
+  title: string;
+  company: string;
+  bullets: string[];
+}
+
+const SparkIcon: React.FC = () => (
   <svg
     className="bullet-icon-spark"
     width="16"
@@ -21,10 +32,10 @@ const SparkIcon = () => (
   </svg>
 );
 
-const Qualifications = () => {
-  const [filter, setFilter] = useState('all');
+export const Qualifications: React.FC = () => {
+  const [filter, setFilter] = useState<'all' | 'work' | 'education'>('all');
 
-  const timelineData = [
+  const timelineData: TimelineItem[] = [
     {
       id: 1,
       type: 'work',

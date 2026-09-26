@@ -1,13 +1,33 @@
+'use client';
+
 import React, { useState } from 'react';
 
-const Skills = () => {
-  const [openTab, setOpenTab] = useState('frontend');
+interface ToolItem {
+  name: string;
+  src: string;
+}
 
-  const toggleTab = (id) => {
+interface SkillItem {
+  name: string;
+  percentage: string;
+}
+
+interface SkillCategory {
+  id: string;
+  title: string;
+  subtitle: string;
+  icon: string;
+  skills: SkillItem[];
+}
+
+export const Skills: React.FC = () => {
+  const [openTab, setOpenTab] = useState<string | null>('frontend');
+
+  const toggleTab = (id: string) => {
     setOpenTab((prev) => (prev === id ? null : id));
   };
 
-  const toolsList = [
+  const toolsList: ToolItem[] = [
     // Frontend
     { name: 'HTML5', src: '/tools/html5.svg' },
     { name: 'CSS3', src: '/tools/css3.svg' },
@@ -50,7 +70,7 @@ const Skills = () => {
     { name: 'Postman', src: '/tools/postman.svg' }
   ];
 
-  const skillCategories = [
+  const skillCategories: SkillCategory[] = [
     {
       id: 'frontend',
       title: 'Frontend Development',
@@ -125,7 +145,7 @@ const Skills = () => {
       <div className="tools">
         {toolsList.map((tool) => (
           <div key={tool.name} className="tool-badge-item" title={tool.name}>
-            <img src={tool.src} alt={tool.name} width="24" height="24" />
+            <img src={tool.src} alt={tool.name} width={24} height={24} />
             <span className="tool-name">{tool.name}</span>
           </div>
         ))}
