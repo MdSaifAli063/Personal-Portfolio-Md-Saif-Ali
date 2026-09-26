@@ -1,10 +1,28 @@
+'use client';
+
 import React, { useState } from 'react';
 
-const Work = () => {
-  const [filter, setFilter] = useState('all');
-  const [activePopupItem, setActivePopupItem] = useState(null);
+interface ProjectItem {
+  id: number;
+  category: string | string[];
+  badge?: string;
+  img: string;
+  title: string;
+  detailsTitle: string;
+  description: string;
+  created: string;
+  technologies: string;
+  role: string;
+  viewLink: string;
+  viewLabel: string;
+  githubLink?: string;
+}
 
-  const projects = [
+export const Work: React.FC = () => {
+  const [filter, setFilter] = useState<'all' | 'ai' | 'fullstack'>('all');
+  const [activePopupItem, setActivePopupItem] = useState<ProjectItem | null>(null);
+
+  const projects: ProjectItem[] = [
     {
       id: 1,
       category: 'ai',

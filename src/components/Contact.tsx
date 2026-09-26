@@ -1,37 +1,53 @@
+'use client';
+
 import React, { useState } from 'react';
 
-const Contact = () => {
-  const [formData, setFormData] = useState({
+interface FormDataState {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+}
+
+interface FocusedFieldsState {
+  name: boolean;
+  email: boolean;
+  phone: boolean;
+  message: boolean;
+}
+
+export const Contact: React.FC = () => {
+  const [formData, setFormData] = useState<FormDataState>({
     name: '',
     email: '',
     phone: '',
     message: '',
   });
 
-  const [focusedFields, setFocusedFields] = useState({
+  const [focusedFields, setFocusedFields] = useState<FocusedFieldsState>({
     name: false,
     email: false,
     phone: false,
     message: false,
   });
 
-  const [statusMessage, setStatusMessage] = useState('');
+  const [statusMessage, setStatusMessage] = useState<string>('');
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleFocus = (field) => {
+  const handleFocus = (field: keyof FocusedFieldsState) => {
     setFocusedFields({ ...focusedFields, [field]: true });
   };
 
-  const handleBlur = (field, value) => {
+  const handleBlur = (field: keyof FocusedFieldsState, value: string) => {
     if (!value) {
       setFocusedFields({ ...focusedFields, [field]: false });
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatusMessage('Please wait...');
 
@@ -52,7 +68,7 @@ const Contact = () => {
       body: JSON.stringify(payload),
     })
       .then(async (response) => {
-        let json = await response.json();
+        const json = await response.json();
         if (response.status === 200) {
           setStatusMessage('Form submitted successfully');
         } else {
@@ -142,7 +158,7 @@ const Contact = () => {
                 onBlur={(e) => handleBlur('name', e.target.value)}
                 required
               />
-              <label htmlFor="">Username</label>
+              <label htmlFor="name">Username</label>
               <span>Username</span>
             </div>
 
@@ -161,7 +177,7 @@ const Contact = () => {
                 onBlur={(e) => handleBlur('email', e.target.value)}
                 required
               />
-              <label htmlFor="">Email</label>
+              <label htmlFor="email">Email</label>
               <span>Email</span>
             </div>
 
@@ -180,7 +196,7 @@ const Contact = () => {
                 onBlur={(e) => handleBlur('phone', e.target.value)}
                 required
               />
-              <label htmlFor="">Phone</label>
+              <label htmlFor="phone">Phone</label>
               <span>Phone</span>
             </div>
 
@@ -198,7 +214,7 @@ const Contact = () => {
                 onBlur={(e) => handleBlur('message', e.target.value)}
                 required
               ></textarea>
-              <label htmlFor="">Message</label>
+              <label htmlFor="message">Message</label>
               <span>Message</span>
             </div>
 
