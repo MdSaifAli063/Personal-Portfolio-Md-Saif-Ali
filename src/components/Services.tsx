@@ -1,9 +1,20 @@
+'use client';
+
 import React, { useState } from 'react';
 
-const Services = () => {
-  const [activeModal, setActiveModal] = useState(null);
+interface ServiceItem {
+  id: number;
+  title: React.ReactNode;
+  modalTitle: string;
+  icon: string;
+  description: string;
+  list: string[];
+}
 
-  const servicesData = [
+export const Services: React.FC = () => {
+  const [activeModal, setActiveModal] = useState<number | null>(null);
+
+  const servicesData: ServiceItem[] = [
     {
       id: 1,
       title: (

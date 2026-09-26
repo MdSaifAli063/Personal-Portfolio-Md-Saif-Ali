@@ -1,13 +1,15 @@
+'use client';
+
 import React, { useRef, useState, useMemo, useEffect } from 'react';
 import GithubGraph from './ui/github-graph';
 import { generateNameContributions } from './ui/name-matrix';
 
-const ANIM_MODES = ['wave', 'scan', 'cascade'];
+const ANIM_MODES: ('wave' | 'scan' | 'cascade')[] = ['wave', 'scan', 'cascade'];
 
-const SignatureAnimation = () => {
-  const containerRef = useRef(null);
-  const [mode, setMode] = useState('pattern'); // 'pattern' | 'live'
-  const [animIndex, setAnimIndex] = useState(0);
+export const SignatureAnimation: React.FC = () => {
+  const containerRef = useRef<HTMLElement | null>(null);
+  const [mode, setMode] = useState<'pattern' | 'live'>('pattern');
+  const [animIndex, setAnimIndex] = useState<number>(0);
 
   // Pre-generate the 7-row matrix spelling "MD SAIF ALI"
   const nameContributions = useMemo(() => generateNameContributions(), []);
@@ -22,7 +24,7 @@ const SignatureAnimation = () => {
 
   const animation = ANIM_MODES[animIndex];
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
     const x = ((e.clientX - rect.left) / rect.width) * 100;

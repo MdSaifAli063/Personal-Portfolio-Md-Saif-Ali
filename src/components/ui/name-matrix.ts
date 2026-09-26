@@ -1,7 +1,13 @@
 /**
  * Generates custom GitHub contribution data spelling "MD SAIF ALI" in a 7-row dot-matrix
  */
-const FONT_7 = {
+export interface ContributionItem {
+  date: string;
+  count: number;
+  level: number;
+}
+
+const FONT_7: Record<string, number[][]> = {
   M: [
     [1, 0, 0, 0, 1],
     [1, 1, 0, 1, 1],
@@ -76,9 +82,9 @@ const FONT_7 = {
   ],
 };
 
-export function generateNameContributions() {
+export function generateNameContributions(): ContributionItem[] {
   const text = ['M', 'D', ' ', 'S', 'A', 'I', 'F', ' ', 'A', 'L', 'I'];
-  const grid = Array.from({ length: 7 }, () => []);
+  const grid: number[][] = Array.from({ length: 7 }, () => []);
 
   // 2 leading blank columns for breathing room
   for (let r = 0; r < 7; r++) grid[r].push(0, 0);
@@ -97,7 +103,7 @@ export function generateNameContributions() {
   for (let r = 0; r < 7; r++) grid[r].push(0, 0);
 
   const totalCols = grid[0].length;
-  const contributions = [];
+  const contributions: ContributionItem[] = [];
   // Sunday Jan 5, 2025
   const start = new Date('2025-01-05T00:00:00.000Z');
 
@@ -110,7 +116,7 @@ export function generateNameContributions() {
       contributions.push({
         date: d.toISOString().slice(0, 10),
         count: isLit ? 12 + ((r + c) % 8) : 0,
-        level: isLit ? (3 + ((r + c) % 2)) : 0,
+        level: isLit ? 3 + ((r + c) % 2) : 0,
       });
     }
   }

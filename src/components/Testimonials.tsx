@@ -1,14 +1,23 @@
+'use client';
+
 import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import type { Swiper as SwiperType } from 'swiper';
 import { Autoplay, Navigation } from 'swiper/modules';
 
-import 'swiper/css';
-import 'swiper/css/navigation';
+interface TestimonialItem {
+  id: number;
+  description: string;
+  date: string;
+  name: string;
+  detail: string;
+  img: string;
+}
 
-const Testimonials = () => {
-  const swiperRef = useRef(null);
+export const Testimonials: React.FC = () => {
+  const swiperRef = useRef<SwiperType | null>(null);
 
-  const testimonials = [
+  const testimonials: TestimonialItem[] = [
     {
       id: 1,
       description:
@@ -46,7 +55,7 @@ const Testimonials = () => {
 
       <div className="testimonials-container container">
         <Swiper
-          onBeforeInit={(swiper) => {
+          onBeforeInit={(swiper: SwiperType) => {
             swiperRef.current = swiper;
           }}
           modules={[Autoplay, Navigation]}
