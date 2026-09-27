@@ -7539,6 +7539,18 @@ body {
 }
 
 @media screen and (max-width: 640px) {
+    .home-social {
+        max-width: calc(100vw - 5.5rem);
+        flex-wrap: wrap !important;
+        row-gap: 0.35rem;
+    }
+
+    .home-social-links {
+        min-width: 0;
+        max-width: 100%;
+        flex-wrap: wrap !important;
+    }
+
     .work-filters {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -7636,12 +7648,12 @@ body {
     }
 
     .floating-badge.badge-1 {
-        top: -26px !important;
-        left: -74px !important;
+        top: -30px !important;
+        left: -34px !important;
     }
 
     .floating-badge.badge-2 {
-        right: -83px !important;
+        right: -28px !important;
     }
 
     .skills-container,
@@ -7802,11 +7814,39 @@ body {
     }
 
     .about-info {
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 0.4rem !important;
+        width: 100% !important;
     }
 
     .about-box {
         min-width: 0;
+        min-height: 118px !important;
+        padding: 0.7rem 0.2rem !important;
+    }
+
+    .about-icon-wrapper {
+        width: 32px !important;
+        height: 32px !important;
+        min-width: 32px !important;
+        margin-bottom: 0.45rem !important;
+    }
+
+    .about-icon {
+        font-size: 1rem !important;
+    }
+
+    .about-title {
+        font-size: clamp(0.53rem, 2.5vw, 0.68rem) !important;
+        letter-spacing: 0.02em !important;
+        white-space: normal !important;
+        line-height: 1.15 !important;
+    }
+
+    .about-subtitle {
+        font-size: clamp(0.52rem, 2.3vw, 0.64rem) !important;
+        line-height: 1.25 !important;
+        overflow-wrap: anywhere;
     }
 
     .certificates-grid,
@@ -7832,6 +7872,16 @@ body {
     .home-social {
         flex-wrap: wrap !important;
         padding-right: 0 !important;
+    }
+
+    .home-social-link {
+        width: 28px !important;
+        height: 28px !important;
+        font-size: 0.82rem !important;
+    }
+
+    .home-social-links {
+        gap: 0.25rem !important;
     }
 
     .home-buttons .btn-primary,
@@ -7868,12 +7918,12 @@ body {
     }
 
     .floating-badge.badge-1 {
-        top: -23px !important;
-        left: -92px !important;
+        top: -30px !important;
+        left: -34px !important;
     }
 
     .floating-badge.badge-2 {
-        right: -83px !important;
+        right: -28px !important;
         bottom: 17% !important;
         top: auto !important;
         left: auto !important;
@@ -7895,6 +7945,25 @@ body {
 
     .contact-card-data {
         overflow-wrap: anywhere;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .home-social {
+        align-content: flex-start;
+        column-gap: 0.35rem !important;
+        row-gap: 0.25rem;
+    }
+
+    .home-social-links {
+        flex-wrap: nowrap !important;
+        gap: 0.18rem !important;
+    }
+
+    .home-social-link {
+        width: 25px !important;
+        height: 25px !important;
+        font-size: 0.75rem !important;
     }
 }
 
