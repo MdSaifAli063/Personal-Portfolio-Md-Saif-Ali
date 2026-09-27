@@ -200,7 +200,7 @@ export const Home: React.FC = () => {
                   <i className="uil uil-award"></i>
                 </div>
                 <div>
-                  <span className="badge-title">5+ Projects</span>
+                  <span className="badge-title">10+ Projects</span>
                   <span className="badge-sub">AI &amp; Web Apps</span>
                 </div>
               </div>
