@@ -1,14 +1,15 @@
 {
   "name": "Md Saif Ali — Full-Stack & AI Developer",
   "short_name": "Saif Ali",
-  "description": "Portfolio of Md Saif Ali — Full-Stack & AI Developer building scalable web applications with clean UI, intelligent AI workflows, and robust backend architectures.",
+  "description": "Portfolio of Md Saif Ali, a Bangalore-based full-stack and AI developer building web applications, AI agents, and LLM-powered products.",
   "start_url": "/",
+  "id": "/",
   "display": "standalone",
   "background_color": "#0a0f1f",
   "theme_color": "#039efe",
   "orientation": "portrait-primary",
   "scope": "/",
-  "lang": "en",
+  "lang": "en-IN",
   "categories": ["portfolio", "developer", "technology"],
   "icons": [
     {

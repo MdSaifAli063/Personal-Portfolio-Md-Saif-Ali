@@ -1,6 +1,11 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
+const siteUrl = 'https://mdsaifali.me';
+const personId = `${siteUrl}/#person`;
+const websiteId = `${siteUrl}/#website`;
+const webpageId = `${siteUrl}/#webpage`;
+
 export const viewport: Viewport = {
   themeColor: '#039efe',
   colorScheme: 'dark',
@@ -10,38 +15,45 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'Md Saif Ali | Full-Stack & AI Developer — Portfolio',
+  metadataBase: new URL(siteUrl),
+  title: 'Md Saif Ali | Full-Stack & AI Developer in Bangalore',
   description:
-    'Portfolio of Md Saif Ali — Full-Stack & AI Developer based in Bangalore. Building scalable web apps with React, Python, Node.js, and AI workflows. Available for opportunities & freelance.',
+    'Md Saif Ali is a Bangalore-based full-stack and AI developer building web applications, AI agents, and LLM-powered products with React, Next.js, Node.js, and Python.',
   keywords: [
     'Md Saif Ali',
     'Full-Stack Developer',
     'AI Developer',
-    'React Developer',
-    'Next.js Developer',
-    'Node.js',
-    'Python',
-    'Web Developer Bangalore',
-    'Portfolio',
+    'software engineer Bangalore',
+    'full-stack developer Bangalore',
+    'AI developer India',
+    'React and Next.js developer',
+    'Node.js developer',
+    'Python developer',
+    'LLM and AI agent development',
+    'web application development',
     'MdSaifAli063',
-    'Freelance Developer',
   ],
-  authors: [{ name: 'Md Saif Ali', url: 'https://personal-portfolio-md-saif-ali.vercel.app/' }],
+  applicationName: 'Md Saif Ali Portfolio',
+  authors: [{ name: 'Md Saif Ali', url: siteUrl }],
   creator: 'Md Saif Ali',
   publisher: 'Md Saif Ali',
+  category: 'technology',
+  referrer: 'origin-when-cross-origin',
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
+      noimageindex: false,
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
   },
   alternates: {
-    canonical: 'https://personal-portfolio-md-saif-ali.vercel.app/',
+    canonical: '/',
   },
   icons: {
     icon: [
@@ -60,69 +72,86 @@ export const metadata: Metadata = {
   manifest: '/site.webmanifest',
   openGraph: {
     type: 'website',
-    siteName: 'Md Saif Ali — Portfolio',
-    title: 'Md Saif Ali | Full-Stack & AI Developer',
-    description:
-      'Full-Stack & AI Developer based in Bangalore. Building scalable web apps with React, Python, Node.js, and intelligent AI workflows. Available for opportunities & freelance.',
-    url: 'https://personal-portfolio-md-saif-ali.vercel.app/',
+    siteName: 'Md Saif Ali Portfolio',
+    title: 'Md Saif Ali | Full-Stack & AI Developer in Bangalore',
+    description: 'Explore the projects, skills, experience, and AI engineering work of Md Saif Ali, a full-stack and AI developer based in Bangalore, India.',
+    url: '/',
     images: [
       {
-        url: 'https://personal-portfolio-md-saif-ali.vercel.app/og-image.png',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Md Saif Ali — Full-Stack & AI Developer Portfolio',
+        alt: 'Md Saif Ali, full-stack and AI developer',
       },
     ],
-    locale: 'en_US',
+    locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',
     site: '@Md_Saif_Ali_063',
     creator: '@Md_Saif_Ali_063',
-    title: 'Md Saif Ali | Full-Stack & AI Developer',
-    description:
-      'Full-Stack & AI Developer building scalable web apps with React, Python, Node.js, and AI workflows. Available for freelance.',
-    images: ['https://personal-portfolio-md-saif-ali.vercel.app/og-image.png'],
+    title: 'Md Saif Ali | Full-Stack & AI Developer in Bangalore',
+    description: 'Full-stack web development, AI agents, and LLM-powered applications by Md Saif Ali in Bangalore, India.',
+    images: ['/og-image.png'],
   },
 };
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Md Saif Ali',
-  url: 'https://personal-portfolio-md-saif-ali.vercel.app/',
-  image: 'https://personal-portfolio-md-saif-ali.vercel.app/og-image.png',
-  logo: 'https://personal-portfolio-md-saif-ali.vercel.app/saifalogo.png',
-  jobTitle: 'Full-Stack & AI Developer',
-  description:
-    'Full-Stack & AI Developer based in Bangalore, India. Building scalable web applications with clean UI, intelligent AI workflows, and robust backend architectures.',
-  email: 'mdsaifali6303@gmail.com',
-  telephone: '+91 9031228966',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Bangalore',
-    addressCountry: 'IN',
-  },
-  sameAs: [
-    'https://github.com/MdSaifAli063',
-    'https://www.linkedin.com/in/mdsaifali063',
-    'https://www.x.com/@Md_Saif_Ali_063',
-    'https://www.instagram.com/md_saif_ali_063',
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': personId,
+      name: 'Md Saif Ali',
+      url: siteUrl,
+      image: `${siteUrl}/portfolioimg.png`,
+      jobTitle: 'Full-Stack & AI Developer',
+      description: 'Bangalore-based full-stack and AI developer building web applications, AI agents, and LLM-powered products.',
+      email: 'mdsaifali6303@gmail.com',
+      telephone: '+91 9031228966',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Bangalore',
+        addressRegion: 'Karnataka',
+        addressCountry: 'IN',
+      },
+      sameAs: [
+        'https://github.com/MdSaifAli063',
+        'https://www.linkedin.com/in/mdsaifali063',
+        'https://x.com/Md_Saif_Ali_063',
+        'https://www.instagram.com/md_saif_ali_063',
+      ],
+      knowsAbout: [
+        'Full-stack web development',
+        'Artificial intelligence',
+        'AI agents and large language models',
+        'React and Next.js',
+        'Node.js',
+        'Python',
+        'Flask and Django',
+        'PostgreSQL',
+      ],
+      mainEntityOfPage: { '@id': webpageId },
+    },
+    {
+      '@type': 'WebSite',
+      '@id': websiteId,
+      url: siteUrl,
+      name: 'Md Saif Ali Portfolio',
+      description: 'Portfolio of Md Saif Ali, a full-stack and AI developer based in Bangalore, India.',
+      inLanguage: 'en-IN',
+      publisher: { '@id': personId },
+    },
+    {
+      '@type': 'ProfilePage',
+      '@id': webpageId,
+      url: siteUrl,
+      name: 'Md Saif Ali | Full-Stack & AI Developer in Bangalore',
+      isPartOf: { '@id': websiteId },
+      mainEntity: { '@id': personId },
+      inLanguage: 'en-IN',
+    },
   ],
-  knowsAbout: [
-    'React',
-    'Next.js',
-    'Node.js',
-    'Python',
-    'Full-Stack Development',
-    'AI Development',
-    'Web Development',
-    'UI/UX Design',
-  ],
-  alumniOf: {
-    '@type': 'Organization',
-    name: 'Bangalore',
-  },
 };
 
 export default function RootLayout({
@@ -131,7 +160,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en-IN" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -142,7 +171,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
         />
         <script
           dangerouslySetInnerHTML={{

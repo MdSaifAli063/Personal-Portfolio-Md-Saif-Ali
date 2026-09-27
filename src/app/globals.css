@@ -8035,9 +8035,10 @@ body {
         align-items: center;
         justify-content: center;
         min-height: 50px;
-        margin: auto 0 0;
+        margin: auto 0 0.75rem;
         padding: 0.25rem 0;
         text-align: center;
+        z-index: 1;
     }
 
     .btn-share .social-share {
@@ -8048,5 +8049,66 @@ body {
 
     .nav-close {
         z-index: 2;
+    }
+}
+
+/* Keep mobile rendering light by stopping decorative, never-ending effects. */
+@media screen and (max-width: 992px) {
+    .tool-icon {
+        display: none !important;
+    }
+
+    .glow-orb {
+        filter: blur(56px);
+        opacity: 0.2;
+        animation: none !important;
+    }
+
+    .home-img-card {
+        animation: none !important;
+    }
+
+    .home-img-card::before {
+        animation: none !important;
+    }
+
+    .card-glow-aura {
+        filter: blur(20px);
+        opacity: 0.35;
+        animation: none !important;
+    }
+
+    .floating-badge {
+        animation: none !important;
+    }
+
+    .about-box,
+    .work-card,
+    .services-content,
+    .contact-card,
+    .contact-form,
+    .testimonial-card {
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+    }
+
+    .sig-ambient-nebula,
+    .sig-particle,
+    .sig-pulse-dot {
+        animation: none !important;
+    }
+
+    .sig-ambient-nebula {
+        filter: blur(36px);
+        opacity: 0.5;
+    }
+
+    .sig-char {
+        animation: none !important;
+        will-change: auto;
+    }
+
+    [aria-label="Loading contributions"] span {
+        animation: none !important;
     }
 }
