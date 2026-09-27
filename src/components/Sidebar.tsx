@@ -129,6 +129,14 @@ export const Sidebar: React.FC = () => {
         </nav>
       </aside>
 
+      {showSidebar && (
+        <div
+          className="nav-overlay"
+          onClick={() => setShowSidebar(false)}
+          aria-hidden="true"
+        />
+      )}
+
       <div className="nav-toggle" onClick={() => setShowSidebar(!showSidebar)}>
         <i className="uil uil-bars"></i>
       </div>
