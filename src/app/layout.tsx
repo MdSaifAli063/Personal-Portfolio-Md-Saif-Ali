@@ -144,6 +144,11 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `if(typeof Element!=='undefined'&&Element.prototype.releasePointerCapture){const orig=Element.prototype.releasePointerCapture;Element.prototype.releasePointerCapture=function(id){try{if(this.hasPointerCapture&&this.hasPointerCapture(id)){orig.call(this,id);}}catch(e){}};};`,
+          }}
+        />
       </head>
       <body className="min-h-screen bg-[#0a0f1f] text-[#c7d2fe] font-['Inter',sans-serif] selection:bg-[#039efe] selection:text-white relative overflow-x-hidden">
         {children}

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface AchievementItem {
   title: string;
@@ -19,6 +19,20 @@ interface CertificationItem {
 export const Achievements: React.FC = () => {
   const [selectedImg, setSelectedImg] = useState<string | null>(null);
   const [dropdownOpen, setDropdownOpen] = useState<boolean>(true);
+
+  useEffect(() => {
+    if (selectedImg) {
+      document.body.classList.add('certificate-modal-open');
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.classList.remove('certificate-modal-open');
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.classList.remove('certificate-modal-open');
+      document.body.style.overflow = '';
+    };
+  }, [selectedImg]);
 
   const achievementsList: AchievementItem[] = [
     {
@@ -232,8 +246,17 @@ export const Achievements: React.FC = () => {
                 <button
                   className="toggle-dropdown"
                   onClick={() => setDropdownOpen(!dropdownOpen)}
+                  aria-expanded={dropdownOpen}
                 >
-                  {dropdownOpen ? 'Hide Achievements ▲' : 'Show Achievements ▼'}
+                  {dropdownOpen ? (
+                    <>
+                      Hide Achievements <i className="uil uil-angle-up"></i>
+                    </>
+                  ) : (
+                    <>
+                      Show Achievements <i className="uil uil-angle-down"></i>
+                    </>
+                  )}
                 </button>
               </div>
             </div>
@@ -257,6 +280,22 @@ export const Achievements: React.FC = () => {
                   </div>
                 ))}
               </div>
+
+              {dropdownOpen && (
+                <div style={{ textAlign: 'center', marginTop: '1.75rem' }}>
+                  <button
+                    className="toggle-dropdown toggle-dropdown-bottom"
+                    onClick={() => {
+                      setDropdownOpen(false);
+                      const el = document.querySelector('.achievements-container');
+                      if (el) el.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                    aria-expanded={dropdownOpen}
+                  >
+                    Hide Achievements <i className="uil uil-angle-up"></i>
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -267,8 +306,16 @@ export const Achievements: React.FC = () => {
           id="certificateModal"
           className="modal visible"
           onClick={() => setSelectedImg(null)}
+          role="dialog"
+          aria-modal="true"
         >
-          <span className="close" onClick={() => setSelectedImg(null)}>
+          <span
+            className="close"
+            onClick={() => setSelectedImg(null)}
+            aria-label="Close certificate preview"
+            role="button"
+            tabIndex={0}
+          >
             &times;
           </span>
           <img
