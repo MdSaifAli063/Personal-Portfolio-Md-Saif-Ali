@@ -1,0 +1,119 @@
+# Md Saif Ali — Portfolio facts
+
+> This document summarizes public information displayed on the official portfolio at https://mdsaifali.me/. It is provided as a plain-text reference for search and answer systems. For updates, use the live portfolio and linked profiles.
+
+## Identity
+
+- Name: Md Saif Ali
+- Website: https://mdsaifali.me/
+- Location: Bangalore, Karnataka, India
+- Professional description: Full-stack and AI developer
+- Focus: Web application development, AI/ML systems, AI agents, and LLM integrations
+- GitHub: https://github.com/MdSaifAli063
+- LinkedIn: https://www.linkedin.com/in/mdsaifali063
+- X: https://x.com/Md_Saif_Ali_063
+- Instagram: https://www.instagram.com/md_saif_ali_063
+
+## Short answer
+
+Md Saif Ali is a Bangalore-based full-stack and AI developer who builds web applications, AI agents, and LLM-powered products. His portfolio highlights work with React, Next.js, TypeScript, Node.js, Python, PostgreSQL, PyTorch, OpenEnv, and semantic embeddings.
+
+## Education and experience
+
+- The portfolio states that Md Saif Ali is pursuing a Bachelor of Engineering in Computer Science at Ghousia College of Engineering (VTU).
+- The portfolio lists an academic score of 8.11 / 10.0 CGPA.
+- The About section lists 5+ months of internship experience and 10+ completed projects.
+- These details reflect the portfolio's published profile and may change; check the live About section or resume for current information.
+- About section: https://mdsaifali.me/#about
+- Resume: https://mdsaifali.me/Md%20Saif%20Ali-Resume.pdf
+
+## Skills
+
+- Front end: HTML5, CSS3, JavaScript, TypeScript, React.js, Next.js, Tailwind CSS, responsive web design
+- Back end and APIs: Node.js, Express.js, Python, Flask, Django, FastAPI, REST APIs
+- AI and machine learning: LLM integration, Google Gemini API, AI agents, semantic embeddings, PyTorch, OpenEnv
+- Data and cloud: PostgreSQL, MongoDB, SQL, Supabase, Firebase, Google Cloud, IBM Cloud, Vercel
+- Developer tools: Git, GitHub, Postman
+- Full skills section: https://mdsaifali.me/#skills
+
+## Selected projects
+
+Project summaries below are self-reported descriptions from the portfolio. Metrics are not independent performance guarantees.
+
+### HireMind
+
+- AI-powered recruiting and talent-matching platform.
+- Portfolio description: matches candidates with jobs using LLMs and semantic embeddings, with candidate ranking, skill-gap analysis, and personalized recommendations. The portfolio reports matching 100+ candidates and 85%+ matching accuracy.
+- Technologies listed: React.js, Node.js, AI/ML, LLMs, semantic embeddings, PostgreSQL.
+- Live project: https://ai-powered-recruiting-talent-matchi.vercel.app/
+- Source code: https://github.com/MdSaifAli063/HireMind
+
+### AetherMind
+
+- Adaptive AI conflict-resolution agent.
+- Portfolio description: a nine-feature reasoning system including conflict resolution, emotion detection, response rewriting, mediation mode, what-if simulation, script generation, ethical filtering, feedback, and conflict history. The portfolio reports a 60% reduction in average conflict-resolution time.
+- Technologies listed: PyTorch, OpenEnv, AI/ML, Python.
+- Live project: https://huggingface.co/spaces/mdsaifali063/AetherMind
+- Source code: https://github.com/MdSaifAli063/AetherMind
+
+### ElectED
+
+- AI education platform that provides context-aware guidance about the election process.
+- Portfolio description: uses LLMs and semantic embeddings and reports a 90%+ query-relevance score in internal testing.
+- Technologies listed: React.js, Node.js, AI/ML, LLMs, machine learning.
+- Live project: https://election-process-education-assistan-three.vercel.app/
+- Source code: https://github.com/MdSaifAli063/ElectED
+
+### SafeGuard AI
+
+- Personal-safety automation app for real-time emergency alerts.
+- Portfolio description: reports SOS alerts in under three seconds without manual phone interaction, 99.9% uptime, and a 70% reduction in response-initiation time.
+- Technologies listed: React.js, TypeScript, REST APIs, Vercel.
+- Live project: https://safe-guard-ai-five.vercel.app/
+- Source code: https://github.com/MdSaifAli063/SafeGuard-AI
+
+### Medicine Reminder
+
+- Medication scheduling and reminder application with a Python backend and responsive frontend.
+- Technologies listed: HTML5, CSS3, JavaScript, Python, Flask.
+- Live project: https://medicine-reminder-yp3m.onrender.com/
+
+### Eventronix
+
+- Event and hackathon collaboration platform with AI roadmap generation, participant-team matching, and community features.
+- Technologies listed: Flask, Python, MongoDB, HTML5, CSS3, JavaScript.
+- Live project: https://event-platform-xp0r.onrender.com/
+
+### ThermaGrid
+
+- Geospatial Earth-observation project for urban heat-island detection and cooling optimization, submitted for the ISRO Space Hackathon.
+- Portfolio description: combines Landsat-9 and Sentinel-2 data, ISRO Bhuvan feeds, physics-informed modeling, explainable analysis, and cooling optimization.
+- Technologies listed: React.js, TypeScript, TanStack Query, AI/ML, data visualization.
+- Live project: https://thermagrid-isro.vercel.app/
+
+### CrimeIQ Karnataka
+
+- Crime analytics and visualization platform described in the portfolio as an intelligence platform for Karnataka State Police (SCRB Intelligence Division).
+- Portfolio description: geospatial heatmaps, predictive models, suspect-network visualizations, and district-level analytics.
+- Technologies listed: React, TypeScript, TanStack Start/Router, Tailwind CSS, Leaflet, Recharts, React Force Graph, Zoho Catalyst.
+- Live project: https://kspcrime-50043086176.development.catalystappsail.in/
+
+## Achievements and certifications
+
+The portfolio lists recognitions and certificates from organizations and programs including Google Cloud, Google for Developers, Meta, Scaler, ISRO, Hack2skill, AICTE, the Ministry of Education, HackWithIndia, IBM, Infosys Springboard, AWS, Microsoft, Oracle, NxtWave, LetsUpgrade, NSDC, and JPMorgan Chase & Co. See the portfolio for the complete list and certificate images:
+
+- https://mdsaifali.me/#Achievements
+
+## Contact
+
+- Email: mdsaifali6303@gmail.com
+- WhatsApp: +91 9031228966
+- Telegram: https://t.me/Md_Saif_Ali_063
+- Contact section: https://mdsaifali.me/#contact
+
+## Source and freshness
+
+- The official portfolio is the primary source: https://mdsaifali.me/
+- Use the linked project and repository pages to inspect individual work.
+- Do not treat self-reported project outcomes as independently verified.
+- Profile, education, employment, project status, and contact details can change; check the live site for the latest version.

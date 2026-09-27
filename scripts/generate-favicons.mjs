@@ -151,14 +151,14 @@ const ogSvgOverlay = Buffer.from(
     <text x="520" y="240" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="900" fill="url(#textGrad)" letter-spacing="2">Md Saif Ali</text>
 
     <!-- Subtitle -->
-    <text x="520" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="600" fill="#93c5fd" letter-spacing="1">Software Engineer • AI/ML &amp; Systems Architect</text>
+    <text x="520" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="600" fill="#93c5fd" letter-spacing="1">Full-Stack Web Development • AI Agents • LLMs</text>
 
     <!-- Tagline Description -->
     <text x="520" y="340" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="400" fill="#94a3b8">
-      Building scalable AI Agents, LLM workflows, and high-performance
+      Building web applications and AI products with modern
     </text>
     <text x="520" y="370" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="400" fill="#94a3b8">
-      full-stack systems with modern UI engineering &amp; cloud infrastructure.
+      frontend, backend, cloud, and language-model workflows.
     </text>
 
     <!-- Tech Stack Tag Pills -->
@@ -189,7 +189,7 @@ const ogSvgOverlay = Buffer.from(
 
     <g transform="translate(520, 525)">
       <circle cx="8" cy="8" r="4" fill="#39d353"/>
-      <text x="22" y="13" font-family="monospace" font-size="14" font-weight="500" fill="#64748b">personal-portfolio-md-saif-ali.vercel.app</text>
+      <text x="22" y="13" font-family="monospace" font-size="14" font-weight="500" fill="#64748b">mdsaifali.me</text>
     </g>
     <g transform="translate(1000, 525)">
       <text x="0" y="13" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#64748b">Bangalore, IN</text>

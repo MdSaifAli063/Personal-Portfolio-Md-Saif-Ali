@@ -10,19 +10,51 @@ export const SignatureAnimation: React.FC = () => {
   const containerRef = useRef<HTMLElement | null>(null);
   const [mode, setMode] = useState<'pattern' | 'live'>('pattern');
   const [animIndex, setAnimIndex] = useState<number>(0);
+  const [isMobileLayout, setIsMobileLayout] = useState(false);
+  const [viewportWidth, setViewportWidth] = useState(0);
 
   // Pre-generate the 7-row matrix spelling "MD SAIF ALI"
   const nameContributions = useMemo(() => generateNameContributions(), []);
 
-  // Automatically cycle through motion animations every 7.5s
   useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 992px)');
+    const updateLayout = () => {
+      setIsMobileLayout(mediaQuery.matches);
+      setViewportWidth(window.innerWidth);
+    };
+
+    updateLayout();
+    mediaQuery.addEventListener('change', updateLayout);
+    window.addEventListener('resize', updateLayout);
+    return () => {
+      mediaQuery.removeEventListener('change', updateLayout);
+      window.removeEventListener('resize', updateLayout);
+    };
+  }, []);
+
+  // Cycle the graph motion on larger screens. Static graph cells reduce work on phones.
+  useEffect(() => {
+    if (isMobileLayout) return;
+
     const timer = setInterval(() => {
       setAnimIndex((prev) => (prev + 1) % ANIM_MODES.length);
     }, 7500);
     return () => clearInterval(timer);
-  }, []);
+  }, [isMobileLayout]);
 
   const animation = ANIM_MODES[animIndex];
+  const graphCellSize = !isMobileLayout
+    ? 14
+    : viewportWidth <= 300
+      ? 4
+      : viewportWidth <= 360
+        ? 5
+        : viewportWidth <= 480
+          ? 6
+          : viewportWidth <= 640
+            ? 7
+            : 9;
+  const graphCellGap = isMobileLayout ? (graphCellSize >= 7 ? 2 : 1) : 4;
 
   const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
     if (!containerRef.current) return;
@@ -119,15 +151,15 @@ export const SignatureAnimation: React.FC = () => {
               data={mode === 'pattern' ? nameContributions : undefined}
               months={6}
               variant="github"
-              animation={animation}
+              animation={isMobileLayout ? 'none' : animation}
               animationSpeed={1.2}
-              cellSize={14}
-              cellGap={4}
-              cellRadius={3}
+              cellSize={graphCellSize}
+              cellGap={graphCellGap}
+              cellRadius={Math.min(3, Math.max(1, Math.round(graphCellSize / 4)))}
               autoFit={false}
               showLegend={true}
               showAccount={false}
-              ambientEffect="tide"
+              ambientEffect={isMobileLayout ? 'none' : 'tide'}
               ambientIntensity={0.7}
             />
           </div>

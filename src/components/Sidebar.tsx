@@ -58,7 +58,7 @@ export const Sidebar: React.FC = () => {
     const shareData = {
       title: 'Check out my profile!',
       text: 'Here’s my profile you might like:',
-      url: 'https://personal-portfolio-md-saif-ali.vercel.app/',
+      url: 'https://mdsaifali.me/',
     };
 
     if (navigator.share) {
