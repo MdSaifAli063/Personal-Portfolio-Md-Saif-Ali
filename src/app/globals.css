@@ -8035,7 +8035,8 @@ body {
         align-items: center;
         justify-content: center;
         min-height: 50px;
-        margin: auto 0 0.75rem;
+        /* Lift the share control clear of the bottom edge on short mobile viewports. */
+        margin: auto 0 1.5rem;
         padding: 0.25rem 0;
         text-align: center;
         z-index: 1;
@@ -8110,5 +8111,80 @@ body {
 
     [aria-label="Loading contributions"] span {
         animation: none !important;
+    }
+}
+
+/* Give the hero room to breathe on wide desktop displays. */
+@media screen and (min-width: 1600px) {
+    .home-container {
+        max-width: 1560px;
+    }
+
+    .home-hero-grid {
+        grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+        gap: clamp(3rem, 4vw, 5rem);
+    }
+
+    .home-img-card {
+        max-width: 480px;
+    }
+}
+
+/* Scale the hero with the larger canvas on 4K and ultra-wide displays. */
+@media screen and (min-width: 2200px) {
+    .home-container {
+        max-width: clamp(1760px, 76vw, 2600px);
+        padding-inline: clamp(3rem, 3vw, 5rem);
+    }
+
+    .home-hero-grid {
+        grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+        gap: clamp(5rem, 4vw, 8rem);
+    }
+
+    .home-title {
+        font-size: clamp(4rem, 3.1vw, 6rem);
+    }
+
+    .home-subtitle {
+        font-size: clamp(1.6rem, 1.35vw, 2.25rem);
+    }
+
+    .home-description {
+        max-width: 850px;
+        font-size: clamp(1.15rem, 0.78vw, 1.55rem);
+    }
+
+    .home-img-card {
+        max-width: clamp(540px, 30vw, 680px);
+    }
+
+    .portrait-frame {
+        height: clamp(620px, 36vh, 820px);
+    }
+
+    .home-social-link {
+        width: 44px;
+        height: 44px;
+        font-size: 1.3rem;
+    }
+
+    .floating-badge .badge-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .badge-title {
+        font-size: clamp(0.85rem, 0.55vw, 1.1rem);
+    }
+
+    .badge-sub {
+        font-size: clamp(0.78rem, 0.48vw, 1rem);
+    }
+}
+
+@media screen and (min-width: 2200px) and (min-height: 1300px) {
+    .home {
+        justify-content: center;
     }
 }
